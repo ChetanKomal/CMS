@@ -1,2 +1,0 @@
-# CMS
-Classroom management system
