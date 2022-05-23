@@ -317,7 +317,7 @@ def classprofile():#classprofile
         Button(ask,text='Proceed',command=report).grid(row=3,column=2)
       
 
-    def dmarksheet():#saving marksheet in csv format
+    def dmarksheet():#saving marksheet in excel format
         connection = sqlite3.connect(f"{clname}.db")
         df = pd.read_sql(sql="select * from subdetails",con=connection)
         df2 = pd.read_sql(sql="select * from stdetails",con=connection)
@@ -746,7 +746,7 @@ def classprofile():#classprofile
     Button(cprofile,text=subjects[4]+' marks',command=sub4m).grid(row=10,column=1)
     Button(cprofile,text=subjects[5]+' marks',command=sub5m).grid(row=11,column=1)
     Button(cprofile,text='Download Marksheet',command=dmarksheet).grid(row=8,column=2)
-    Button(cprofile,text='').grid(row=9,column=2)#for uploading marks
+
     Label(cprofile,text='').grid(row=10,column=2)
     Label(cprofile,text='').grid(row=12,column=2)
 
