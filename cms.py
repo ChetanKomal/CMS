@@ -317,19 +317,7 @@ def classprofile():#classprofile
       
 
     def dmarksheet():#saving marksheet in csv format
-        ft=[('CSV file','*.csv')]
-        file=fd.asksaveasfile(filetypes=ft,mode="w",defaultextension=ft)
-        fieldnames=['Student Name','Marks']
-        writer=csv.DictWriter(file,fieldnames=fieldnames)
-        writer.writeheader() 
-        ncursor.execute('select studentname from stdetails;')
-        row331=ncursor.fetchall()
-        for i in range(len(row331)):
-            row33=row331[i]
-            nm=row33[0]#name
-            writer.writerow({'Student Name':nm,'Marks':0})
-        file.close()
-        print('complete')
+        print(clname)
     def sub1m(): #subject1 marks
         execu='select * from subdetails where subject=?'
         ncursor.execute(execu,(subjects[1],))
