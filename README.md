@@ -7,7 +7,7 @@ modules required to run the project:
 4. matplotlib
 
 how to install the modules:
-pip install tk
-pip install pandas
-pip install pysqlite3
+pip install tk<br>
+pip install pandas<br>
+pip install pysqlite3<br>
 pip install matplotlib
