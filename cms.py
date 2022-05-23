@@ -9,6 +9,7 @@ from sqlite3 import Error
 import matplotlib.pyplot as plt
 import math
 import csv
+import pandas as pd
 
 conn = sqlite3.connect("main.db")#main database conn.
 cursor=conn.cursor()
@@ -317,7 +318,11 @@ def classprofile():#classprofile
       
 
     def dmarksheet():#saving marksheet in csv format
-        print(clname)
+        connection = sqlite3.connect(f"{clname}.db")
+        df = pd.read_sql(sql="select * from subdetails",con=connection)
+        df2 = pd.read_sql(sql="select * from stdetails",con=connection)
+        df.to_excel("subdetails.xlsx",index=False)
+        df2.to_excel("stdetails.xlsx",index=False)
     def sub1m(): #subject1 marks
         execu='select * from subdetails where subject=?'
         ncursor.execute(execu,(subjects[1],))
