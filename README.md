@@ -1,4 +1,4 @@
-<h3>Classroom management system</h3>
+<h3>Classroom management system:</h3>
 
 modules required to run the project: 
 1. tkinter
@@ -6,7 +6,7 @@ modules required to run the project:
 3. pandas
 4. matplotlib
 
-how to install the modules:
+how to install the modules:<br>
 pip install tk<br>
 pip install pandas<br>
 pip install pysqlite3<br>
